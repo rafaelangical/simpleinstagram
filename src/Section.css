@@ -1,0 +1,28 @@
+.images-wrapper{
+	margin: 0 auto;
+	width: 50vw;
+	min-height: 110vh;
+	height: 100%;
+	display: flex 1	;
+	flex-flow: column wrap;
+	text-align: center;
+	align-items: center;
+}
+.section-images{
+	border:1px solid black;
+	margin: 0 auto;	
+	margin: 1em;
+	width: 17em;
+	height: 18em;
+}
+button.about{
+	margin: 3em 0 3em 0;
+	width: 20em;
+	height: 3em;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-color: blue;
+	border-radius: 15%;
+	color: white;
+}

@@ -1,0 +1,65 @@
+.header{
+	margin: 0 auto;
+	width: 50vw;
+	height: 20vh;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 5em 1em 3em 1em;
+}
+img.logo{
+	margin-top: 2em;
+	border-radius: 50%;
+	width: 10em;
+	height: 10em;
+}
+h1{
+	font-family: helvetica;
+	padding-left: 1em;
+}
+.row-photo{
+	width: 30%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.row-profile{
+	width: 70%;
+	height: 100%;
+	display: flex;
+	flex-flow: column wrap;
+}
+.row-one, .row-two, .row-there{
+	width: 100%;
+	height: 30%;
+	margin-top: 2%;
+	display: inline-flex;
+	flex-flow: row wrap;
+}
+.site{
+	display: flex;
+	flex-flow: row wrap;
+	padding-left:2em;
+	width: 100%;
+	height: 30%;
+}
+a{
+	text-decoration-style: none;
+	text-decoration-line: none;
+	color: blue;
+	font-family: arial;
+	font-weight: bolder;
+}
+p{
+	padding-left: 2em;
+}
+span{
+	font-weight: bold;
+}
+button.edit-profile{
+	font-weight: bold;
+	margin-top: 2em;
+	margin-left: 2em;
+	width: 10em;
+	height: 2em;
+}
