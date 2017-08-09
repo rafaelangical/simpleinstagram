@@ -1,21 +1,21 @@
-.images-wrapper{
+.images-wrapper {
 	margin: 0 auto;
 	width: 50vw;
 	min-height: 110vh;
 	height: 100%;
-	display: flex 1	;
+	display: flex 1;
 	flex-flow: column wrap;
 	text-align: center;
 	align-items: center;
 }
-.section-images{
-	border:1px solid black;
-	margin: 0 auto;	
+.section-images {
+	border: 1px solid black;
+	margin: 0 auto;
 	margin: 1em;
 	width: 17em;
 	height: 18em;
 }
-button.about{
+button.about {
 	margin: 3em 0 3em 0;
 	width: 20em;
 	height: 3em;
@@ -25,4 +25,102 @@ button.about{
 	background-color: blue;
 	border-radius: 15%;
 	color: white;
+}
+.modal-back {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	display: none;
+	z-index: 1;
+	overflow: auto;
+}
+.modal-content {
+	margin: 20% auto;
+	top: 20%;
+	left: 20%;
+	width: 60%;
+	height: 65%;
+	display: flex;
+	flex: column wrap;
+}
+.columnOne,
+.columnFour {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	width: 12%;
+	height: 100%;
+}
+.columnTwo {
+	width: 46%;
+	height: 100%;
+	background-color: blue;
+	align-items: center;
+}
+.columnThere {
+	width: 30%;
+	height: 100%;
+	background-color: white;
+}
+.close {
+	color: white;
+	position: fixed;
+	top: 0.2em;
+	right: 1em;
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+.prev,
+.next {
+	cursor: pointer;
+	color: #999;
+	font-weight: bold;
+	font-size: 1.5em;
+	transition: 0.6s ease;
+	border-radius: 0 5px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.image-modal-principal {
+	width: 100%;
+	height: 100%;
+}
+.image-logo-modal {
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	margin: 2%;
+	padding: 2%;
+}
+.row1-columThere {
+	height: 15%;
+	width: 100%;
+	border-bottom: 1px solid #999;
+	display: inline-block;
+}
+.row2-columnThere {
+	height: 58%;
+	width: 100%;
+	border-bottom: 1px solid #999;
+}
+.row3-columnThere {
+	height: 15%;
+	width: 100%;
+	border-bottom: 1px solid #999;
+}
+.row4-columnThere {
+	height: 10%;
+	width: 100%;
+	border-bottom: 1px solid #999;
 }
