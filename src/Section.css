@@ -41,8 +41,8 @@ button.about {
 	margin: 20% auto;
 	top: 20%;
 	left: 20%;
-	width: 60%;
-	height: 65%;
+	width: 50%;
+	height: 55%;
 	display: flex;
 	flex: column wrap;
 }
@@ -58,8 +58,9 @@ button.about {
 .columnTwo {
 	width: 46%;
 	height: 100%;
-	background-color: blue;
+	background-color: white;
 	align-items: center;
+	border-right: 1px solid #999;
 }
 .columnThere {
 	width: 30%;
