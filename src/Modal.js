@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import logo from './logo.jpg';
-import images from './Section';
 
 class Modal extends React.Component {
   render() {
@@ -32,14 +31,38 @@ class Modal extends React.Component {
     const prev = () => {}
     const next = () => {}
 
-    const currentImage = [
+    //tests 
+    const images  = [
       'http://lorempixel.com/400/200',
       'http://lorempixel.com/400/300',
       'http://lorempixel.com/400/400',
-      'http://lorempixel.com/400/300'].map((src,index)  => {
-      return <img key={index[0]} src={src} alt="" className="image-modal-principal"/>
-      alert(src)
+      'http://lorempixel.com/400/300',
+      'http://lorempixel.com/400/400',
+      'http://lorempixel.com/400/100',
+      'http://lorempixel.com/400/200',
+      'http://lorempixel.com/400/400',
+      'http://lorempixel.com/400/300',
+      'http://lorempixel.com/400/100',
+      'http://lorempixel.com/500/200',
+      'http://lorempixel.com/300/300'
+    ] 
+
+    const currentImage = images.map((src,index) => {
+      return <img key={index} className="image-modal-principal" alt="" src={src} /> 
     })
+
+    const novaImg = currentImage.filter((src,index) => <img src={src.src === 1} key={index.index === 1}/>)
+
+    var ImageNew = currentImage.filter(function (src,index){
+      if(index = currentImage.key === 1){
+        return <img key={index.key} alt="" src={src.src}/>
+      }
+    })
+
+    console.log(currentImage)
+    console.log(novaImg)
+    console.log(ImageNew)
+
 
     return (
         <div className="modal-back" style={modalStyle} id="novo">
@@ -53,12 +76,12 @@ class Modal extends React.Component {
               </a>
             </div>
             <div className="columnTwo">
-              {currentImage}
+              {novaImg}
             </div>
             <div className="columnThere">
               <div className="row1-columThere">
                 <a href="#">
-                  <img src={logo} className="image-logo-modal" />
+                  <img src={logo} className="image-logo-modal" alt="img-modal"/>
                   <a href="#">fael.s.n</a>
                   <br />
                   <a href="#">fael.s.n</a>

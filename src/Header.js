@@ -7,7 +7,7 @@ export default function Header() {
 		<div className="header">
 			<div className="row-photo">
 				<a href="#" className="logo">
-					<img src={logo} className="logo" />
+					<img src={logo} className="logo" alt="logo" />
 				</a>
 			</div>
 			<div className="row-profile">
