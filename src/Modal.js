@@ -28,8 +28,6 @@ class Modal extends React.Component {
     //const currentImage = [images].map((src,index)  => {
       //return <img key={index} src={src} alt="" className="image-modal-principal"/>
     //})
-    const prev = () => {}
-    const next = () => {}
 
     //tests 
     const images  = [
@@ -47,22 +45,32 @@ class Modal extends React.Component {
       'http://lorempixel.com/300/300'
     ] 
 
+    var position = 1;
+
+    //make map for array of images
     const currentImage = images.map((src,index) => {
       return <img key={index} className="image-modal-principal" alt="" src={src} /> 
     })
 
-    const novaImg = currentImage.filter((src,index) => <img src={src.src === 1} key={index.index === 1}/>)
+    const Imageee = currentImage.filter((src,index) =>  index === position );  
 
-    var ImageNew = currentImage.filter(function (src,index){
-      if(index = currentImage.key === 1){
-        return <img key={index.key} alt="" src={src.src}/>
-      }
+    const ImageNew = Imageee.filter((src,index) => {
+      return <img key={index} alt="" src={src} className="image-modal-principal"/>
     })
 
-    console.log(currentImage)
-    console.log(novaImg)
-    console.log(ImageNew)
+    const prev = () => {
+      return position -= 1 
+    }
 
+    const next = () => {
+      return this.position += 1
+    }
+    console.log(currentImage)
+    console.log(ImageNew)
+    console.log(Imageee)
+    console.log(prev)
+    console.log(next)
+    console.log(position)
 
     return (
         <div className="modal-back" style={modalStyle} id="novo">
@@ -76,7 +84,7 @@ class Modal extends React.Component {
               </a>
             </div>
             <div className="columnTwo">
-              {novaImg}
+              {ImageNew}
             </div>
             <div className="columnThere">
               <div className="row1-columThere">
