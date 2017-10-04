@@ -1,8 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import logo from './logo.jpg';
 
-class Modal extends React.Component {
+export class Modal extends Component {
+  
+  state = {
+    position: 5
+  };
+
+  next = (position) => {
+    this.setState({position: position - 1})
+  };
+
+  prev = (position) => {
+    this.setState({position: position + 1})
+  };
+  
   render() {
 
     //Não renderiza se show for false
@@ -22,12 +35,8 @@ class Modal extends React.Component {
     const modalContent = {
       margin: "0 auto",
       position: "absolute",
-      color: "red",
     };
 
-    //const currentImage = [images].map((src,index)  => {
-      //return <img key={index} src={src} alt="" className="image-modal-principal"/>
-    //})
 
     //tests 
     const images  = [
@@ -45,32 +54,22 @@ class Modal extends React.Component {
       'http://lorempixel.com/300/300'
     ] 
 
-    var position = 1;
 
     //make map for array of images
-    const currentImage = images.map((src,index) => {
+    const mapImages = images.map((src,index) => {
       return <img key={index} className="image-modal-principal" alt="" src={src} /> 
     })
 
-    const Imageee = currentImage.filter((src,index) =>  index === position );  
+    const filterImage = mapImages.filter((src,index) =>  index === this.props.position );  
 
-    const ImageNew = Imageee.filter((src,index) => {
-      return <img key={index} alt="" src={src} className="image-modal-principal"/>
+    const setImageWindow = filterImage.filter((src,index) => {
+      return <img key={index} alt="" src={src} className="image-modal-principal" onClick={this.}/>
     })
 
-    const prev = () => {
-      return position -= 1 
-    }
 
-    const next = () => {
-      return this.position += 1
-    }
-    console.log(currentImage)
-    console.log(ImageNew)
-    console.log(Imageee)
-    console.log(prev)
-    console.log(next)
-    console.log(position)
+    console.log(this.next)
+    console.log(this.prev)
+    console.log("value:"+" = "+this.position)
 
     return (
         <div className="modal-back" style={modalStyle} id="novo">
@@ -79,28 +78,26 @@ class Modal extends React.Component {
               &times;
             </a>
             <div className="columnOne">
-              <a href="#" className="prev" onClick={prev}>
+              <a href="#" className="prev" onClick={this.prev}>
                 &#10094;
               </a>
             </div>
             <div className="columnTwo">
-              {ImageNew}
+              {setImageWindow}
             </div>
             <div className="columnThere">
               <div className="row1-columThere">
                 <a href="#">
                   <img src={logo} className="image-logo-modal" alt="img-modal"/>
-                  <a href="#">fael.s.n</a>
-                  <br />
-                  <a href="#">fael.s.n</a>
                 </a>
+                <a href="#">fael.s.n</a>
               </div>
               <div className="row2-columnThere" />
               <div className="row3-columnThere" />
               <div className="row4-columnThere" />
             </div>
             <div className="columnFour">
-              <a href="#" className="next" onClick={next}>
+              <a href="#" className="next" onClick={this.next}>
                 &#10095;
               </a>
             </div>

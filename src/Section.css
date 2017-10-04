@@ -108,7 +108,10 @@ button.about {
 	height: 15%;
 	width: 100%;
 	border-bottom: 1px solid #999;
-	display: inline-block;
+	align-items: center;
+	display:flex;
+	flex: 1;
+	flex-flow: row wrap;
 }
 .row2-columnThere {
 	height: 58%;
