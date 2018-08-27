@@ -5,9 +5,14 @@
   "homepage": "https://rafaelangical.github.io/simpleinstagram",
   "dependencies": {
     "gh-pages": "^1.2.0",
+    "hoek": "^5.0.4",
+    "lodash": "^4.17.10",
+    "node-mime": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "sshpk": "^1.14.2",
+    "url-parse": "^1.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
