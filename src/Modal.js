@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import logo from './logo.jpg';
 
 
@@ -33,9 +32,10 @@ class Modal extends Component {
     }
   };
 
-  setImageByTarget = (key) => {
-    this.setState({ position: key.target.value })
-    console.log("Funcionou " + key.target.value)
+  setImageByTarget = (e) => {
+    console.log(e);
+    //this.setState({ position: key.target.value })
+    //console.log("Funcionou " + key.target.value)
   }
 
   render() {
@@ -82,7 +82,7 @@ class Modal extends Component {
     const filterImage = mapImages.filter((src, index) => index === this.state.position);
 
     const setImageWindow = filterImage.filter((src, index) => {
-      return <a href="" onlick={() => this.setImageByTarget(this.index)}><img key={index} alt="images-modal" src={src} className="image-modal-principal"/></a>
+      return <img key={index} alt="images-modal" src={src} className="image-modal-principal" onlick={(index) => console.log(index)}/>
     });
 
 
@@ -123,10 +123,5 @@ class Modal extends Component {
     );
   }
 }
-
-Modal.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  show: PropTypes.bool,
-};
 
 export default Modal

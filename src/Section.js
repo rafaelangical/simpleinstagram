@@ -10,10 +10,12 @@ class Section extends Component {
 				isModalOpened: false,
 				position: 0,
 			}
+			this.estateModal.bind(this);
 		}
 
-		estateModal = (index) => {
-			this.setState({position: index.target.value});
+		estateModal = (e) => {
+			console.log(e.id);
+			//this.setState({position: index.target.value});
       this.setState({
       	isOpen: !this.state.isOpen
     	}); 
@@ -36,8 +38,8 @@ class Section extends Component {
 			'http://lorempixel.com/300/300'
 		];
 
-		const setImage = images.map ((src,index) => {
-			return <img key={index} className="section-images" alt="" src={src} onClick={(e) => this.estateModal(this.index) }/>
+		const setImage = images.map ((image) => {
+			return <img key={image._id} className="section-images" alt="" src={image} onClick={(e) => this.estateModal(e) }/>
     });
 
 		return (
